@@ -2,8 +2,10 @@
   <div class="black-bg" v-if="모달창열렸니 == true">
     <div class="white-bg">
       <button @click="ifClickedClosedButton">닫기</button>
-      <h4>상세페이지</h4>
-      <p>상세페이지내용임</p>
+      <h4>{{원룸들[누른거].title}}</h4>
+      <img :src="원룸들[누른거].image">
+      <p>{{ 원룸들[누른거].price }}</p>
+      <p>{{ 원룸들[누른거].content }}</p>
     </div>
   </div>
   <div class="menu">
@@ -12,7 +14,7 @@
   <div class="products">
     <div v-for="(a, i) in 원룸들" :key="i">
       <img :src="a.image" class="room-img">
-      <h4 @click="모달창열렸니 = true">{{ a.title }}</h4>
+      <h4 @click="ifClickedDetailPage(i)">{{ a.title }}</h4>
       <p>{{ a.price }}</p>
     </div>
   </div>
@@ -25,8 +27,9 @@ export default {
   name: 'App',
   data() {
     return {
+      누른거 : 0,
       원룸들: data,
-      모달창열렸니: true,
+      모달창열렸니: false,
       신고수: [0, 0, 0],
       메뉴들: ['Home', 'Shop', 'About']
     }
@@ -34,6 +37,11 @@ export default {
   methods: {
     increase(i) {
       this.신고수[i] += 1
+    },
+
+    ifClickedDetailPage(i){
+      this.모달창열렸니 = true;
+      this.누른거 = i;
     },
 
     ifClickedClosedButton() {
@@ -64,6 +72,11 @@ export default {
 .menu a {
   color: white;
   padding: 10px;
+}
+
+img {
+  padding: 10px;
+  width: 80%;
 }
 
 body {
