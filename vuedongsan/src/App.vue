@@ -2,6 +2,12 @@
   <div class="menu">
     <a v-for="(작명, i) in 메뉴들" :key="i"> {{ 작명 }}</a>
   </div>
+  <div class="products">
+    <div v-for="(제목, i) in products" :key="i">
+      <h4>{{ 제목 }}</h4>
+      <p>50만원</p>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -9,7 +15,8 @@ export default {
   name: 'App',
   data() {
     return {
-      메뉴들: ['Home', 'Shop', 'About']
+      메뉴들: ['Home', 'Shop', 'About'],
+      products : ['역삼동원룸', '천호동원룸', '마포구원룸']
     }
   }
 }
