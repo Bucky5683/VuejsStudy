@@ -10,24 +10,25 @@
     <a v-for="(작명, i) in 메뉴들" :key="i"> {{ 작명 }}</a>
   </div>
   <div class="products">
-    <div v-for="(제목, i) in products" :key="i">
-      <h4>{{ 제목 }}</h4>
-      <p>50만원</p>
-      <button @click="increase(i)">허위매물신고</button>
-      <span>신고수 : {{ 신고수[i] }} </span>
+    <div v-for="(a, i) in 원룸들" :key="i">
+      <img :src="a.image" class="room-img">
+      <h4 @click="모달창열렸니 = true">{{ a.title }}</h4>
+      <p>{{ a.price }}</p>
     </div>
   </div>
 </template>
 
 <script>
+import data from './oneroom.js'
+
 export default {
   name: 'App',
   data() {
     return {
+      원룸들: data,
       모달창열렸니: true,
       신고수: [0, 0, 0],
-      메뉴들: ['Home', 'Shop', 'About'],
-      products: ['역삼동원룸', '천호동원룸', '마포구원룸']
+      메뉴들: ['Home', 'Shop', 'About']
     }
   },
   methods: {
@@ -37,7 +38,7 @@ export default {
 
     ifClickedClosedButton() {
       this.모달창열렸니 = false
-      
+
     }
   }
 }
