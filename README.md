@@ -1,12 +1,13 @@
 # Vue.js 3 Study
 
+
 ![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vue.js&logoColor=white)
 
 🍎코딩애플 &lt;인스타그램을 만들며 배워보는 Vue.js 3 완벽 가이드> 수강하며 코딩🍎
 
 ## 강의 목록
 
-### Part1 : 부동삱 쇼핑몰
+### Part1 : 부동산 쇼핑몰
 - [ ] 카카오가 리액트 냅두고 왜 Vue 쓰는지 알려드림
 - [ ] 개발환경 셋팅과 Vue 3 설치 (자주 겪는 에러 포함)
 - [ ] HTML에 데이터 꽂아넣는 Vue 데이터바인딩 문법
