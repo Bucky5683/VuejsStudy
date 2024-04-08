@@ -1,12 +1,12 @@
 # Vue.js 3 Study
-
-
+<br/>
+<br/>
 ![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vue.js&logoColor=white)
-
+<br/>
 🍎코딩애플 &lt;인스타그램을 만들며 배워보는 Vue.js 3 완벽 가이드> 수강하며 코딩🍎
-
-
-
+<br/>
+<br/>
+<br/>
 ## 📜 강의 목록
 
 ### 📌 Part1 : 부동산 쇼핑몰
