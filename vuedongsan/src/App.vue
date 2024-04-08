@@ -37,6 +37,7 @@ export default {
 
     ifClickedClosedButton() {
       this.모달창열렸니 = false
+      
     }
   }
 }
