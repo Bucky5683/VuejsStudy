@@ -1,33 +1,17 @@
 <template>
-
-  <div class="black-bg" v-if="모달창열렸니 == true">
-    <div class="white-bg">
-      <button @click="ifClickedClosedButton">닫기</button>
-      <h4>{{ 원룸들[누른거].title }}</h4>
-      <img :src="원룸들[누른거].image">
-      <p>{{ 원룸들[누른거].price }}</p>
-      <p>{{ 원룸들[누른거].content }}</p>
-    </div>
-  </div>
-
+  <ModalView :원룸들="원룸들" :모달창열렸니="모달창열렸니" :누른거="누른거"/>
   <div class="menu">
     <a v-for="(작명, i) in 메뉴들" :key="i"> {{ 작명 }}</a>
   </div>
-
-  <div class="products">
-    <div v-for="(a, i) in 원룸들" :key="i">
-      <img :src="a.image" class="room-img">
-      <h4 @click="ifClickedDetailPage(i)">{{ a.title }}</h4>
-      <p>{{ a.price }}</p>
-    </div>
-  </div>
-
+  <Card :원룸들="원룸들"/>
   <Discount />
 </template>
 
 <script>
 import data from './oneroom.js'
 import Discount from './components/Discount.vue'
+import ModalView from './components/Modal.vue'
+import Card from './components/CardView.vue'
 
 export default {
   name: 'App',
@@ -42,6 +26,8 @@ export default {
   },
   components: {
     Discount,
+    ModalView,
+    Card,
   },
   methods: {
     increase(i) {
