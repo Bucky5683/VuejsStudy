@@ -1,5 +1,5 @@
 <template>
-  <ModalView @closeModal="모달창열렸니 = false" :원룸들="원룸들" :모달창열렸니="모달창열렸니" :누른거="누른거"/>
+  <ModalView @closeModal="모달창열렸니 = false" :원룸들="원룸들" :모달창열렸니="모달창열렸니" :누른거="누른거" />
   <div class="menu">
     <a v-for="(작명, i) in 메뉴들" :key="i"> {{ 작명 }}</a>
   </div>
@@ -10,6 +10,7 @@
       <button @click="sortId()">추천 정렬</button>
     </a>
   </div>
+  <p>지금 결제하면 {{ amount }}% 할인</p>
   <Card @openModal="모달창열렸니 = true; 누른거 = $event" :원룸들="원룸들" />
   <Discount />
 </template>
@@ -31,7 +32,8 @@ export default {
       isSortPrice: false,
       isSortName: false,
       신고수: [0, 0, 0],
-      메뉴들: ['Home', 'Shop', 'About']
+      메뉴들: ['Home', 'Shop', 'About'],
+      amount: 30,
     }
   },
   components: {
@@ -74,6 +76,11 @@ export default {
     sortId() {
       this.원룸들 = [...this.원룸들원본];
     }
+  },
+  mounted() {
+    setInterval(() => {
+      this.amount--;
+    }, 1000);
   }
 }
 

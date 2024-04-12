@@ -28,11 +28,11 @@ https://codingapple.com/course/vue-js/
 - [x] 부모가 가진 데이터를 자식이 쓰고 싶으면 props로 전해주셈
 - [x] props 나머지 내용 조금 & 저번시간 숙제
 - [x] 자식이 부모데이터 바꾸고 싶으면 custom event로 메시지만 주십쇼
-- [ ] 사용자의 input을 받는 법 (v-model)
-- [ ] watcher로 데이터 감시하는 법
-- [ ] Vue에서 매끈한 UI 애니메이션 주는 법 2개
-- [ ] 상품정렬기능과 데이터 원본 보존
-- [ ] Vue의 라이프사이클을 어디다 쓰냐면
+- [x] 사용자의 input을 받는 법 (v-model)
+- [x] watcher로 데이터 감시하는 법
+- [x] Vue에서 매끈한 UI 애니메이션 주는 법 2개
+- [x] 상품정렬기능과 데이터 원본 보존
+- [x] Vue의 라이프사이클을 어디다 쓰냐면
 
 ### 📌 Part2 : Nlog 레이아웃과 라우터
 - [ ] Blog 프로젝트 생성과 뷰에서 Bootstrap 4, 5 사용법

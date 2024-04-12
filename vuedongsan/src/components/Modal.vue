@@ -37,6 +37,11 @@ export default {
                 alert('숫자를 입력해주세요')
             }
         }
+    },
+    beforeUpdate() {
+        if (this.month == 2) {
+            alert('2개월은 너무 적음.. 안팝니다')
+        }
     }
 }
 </script>
