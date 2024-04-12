@@ -3,6 +3,13 @@
   <div class="menu">
     <a v-for="(작명, i) in 메뉴들" :key="i"> {{ 작명 }}</a>
   </div>
+  <div>
+    <a>
+      <button @click="sortPrice()">가격 정렬</button>
+      <button @click="sortName()">이름 정렬</button>
+      <button @click="sortId()">추천 정렬</button>
+    </a>
+  </div>
   <Card @openModal="모달창열렸니 = true; 누른거 = $event" :원룸들="원룸들" />
   <Discount />
 </template>
@@ -18,8 +25,11 @@ export default {
   data() {
     return {
       누른거: 0,
-      원룸들: data,
+      원룸들: [...data],
+      원룸들원본: [...data],
       모달창열렸니: false,
+      isSortPrice: false,
+      isSortName: false,
       신고수: [0, 0, 0],
       메뉴들: ['Home', 'Shop', 'About']
     }
@@ -42,6 +52,27 @@ export default {
     ifClickedClosedButton() {
       this.모달창열렸니 = false
 
+    },
+
+    sortPrice() {
+      this.isSortPrice = !this.isSortPrice; // 토글
+      this.원룸들.sort((a, b) => {
+        console.log("가격 내림차순" + this.isSortPrice);
+        let result = a.price - b.price;
+        return this.isSortPrice ? result : -result;
+      });
+    },
+
+    sortName() {
+      this.isSortName = !this.isSortName; // 토글
+      this.원룸들.sort((a, b) => {
+        let result = a.title.localeCompare(b.title);
+        return this.isSortName ? result : -result;
+      });
+    },
+
+    sortId() {
+      this.원룸들 = [...this.원룸들원본];
     }
   }
 }
