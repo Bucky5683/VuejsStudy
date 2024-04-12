@@ -6,7 +6,7 @@
             <img :src="원룸들[누른거].image">
             <p>{{ 원룸들[누른거].price }}</p>
             <p>{{ 원룸들[누른거].content }}</p>
-            <input @input="month = $event.target.value">
+            <input v-model="month">
         </div>
     </div>
 </template>
