@@ -6,6 +6,7 @@
             <img :src="원룸들[누른거].image">
             <p>{{ 원룸들[누른거].price }}</p>
             <p>{{ 원룸들[누른거].content }}</p>
+            <input @input="month = $event.target.value">
         </div>
     </div>
 </template>
@@ -18,6 +19,13 @@ export default {
         원룸들: Array,
         모달창열렸니: Boolean,
         누른거: Number,
+    },
+
+    data() {
+        return {
+            month: 0,
+            endPrice: 0,
+        }
     }
 }
 </script>
