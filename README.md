@@ -24,10 +24,10 @@ https://codingapple.com/course/vue-js/
 - [x] v-if와 모달창 만들기 (Vue에서 동적인 UI 만드는 법)
 - [x] 실제 데이터를 박아넣어 상품목록을 만들자 (import/export)
 - [x] 모달창 내에 상세페이지 만들기
-- [ ] HTML 복잡해보이면 컴포넌트 Component 만들어 쓰셈
-- [ ] 부모가 가진 데이터를 자식이 쓰고 싶으면 props로 전해주셈
-- [ ] props 나머지 내용 조금 & 저번시간 숙제
-- [ ] 자식이 부모데이터 바꾸고 싶으면 custom event로 메시지만 주십쇼
+- [x] HTML 복잡해보이면 컴포넌트 Component 만들어 쓰셈
+- [x] 부모가 가진 데이터를 자식이 쓰고 싶으면 props로 전해주셈
+- [x] props 나머지 내용 조금 & 저번시간 숙제
+- [x] 자식이 부모데이터 바꾸고 싶으면 custom event로 메시지만 주십쇼
 - [ ] 사용자의 input을 받는 법 (v-model)
 - [ ] watcher로 데이터 감시하는 법
 - [ ] Vue에서 매끈한 UI 애니메이션 주는 법 2개

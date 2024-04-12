@@ -1,7 +1,7 @@
 <template>
     <div class="black-bg" v-if="모달창열렸니 == true">
         <div class="white-bg">
-            <button @click="ifClickedClosedButton">닫기</button>
+            <button @click="$emit('closeModal')">닫기</button>
             <h4>{{ 원룸들[누른거].title }}</h4>
             <img :src="원룸들[누른거].image">
             <p>{{ 원룸들[누른거].price }}</p>
@@ -18,12 +18,6 @@ export default {
         원룸들: Array,
         모달창열렸니: Boolean,
         누른거: Number,
-    },
-
-    methods: {
-        // ifClickedClosedButton() {
-        //     this.모달창열렸니 = false
-        // }
     }
 }
 </script>

@@ -2,7 +2,7 @@
     <div class="products">
     <div v-for="(a, i) in 원룸들" :key="i">
       <img :src="a.image" class="room-img">
-      <h4 @click="ifClickedDetailPage(i)">{{ a.title }}</h4>
+      <h4 @click="$emit('openModal', i)">{{ a.title }}</h4>
       <p>{{ a.price }}</p>
     </div>
   </div>

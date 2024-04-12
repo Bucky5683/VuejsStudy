@@ -1,9 +1,9 @@
 <template>
-  <ModalView :원룸들="원룸들" :모달창열렸니="모달창열렸니" :누른거="누른거"/>
+  <ModalView @closeModal="모달창열렸니 = false" :원룸들="원룸들" :모달창열렸니="모달창열렸니" :누른거="누른거"/>
   <div class="menu">
     <a v-for="(작명, i) in 메뉴들" :key="i"> {{ 작명 }}</a>
   </div>
-  <Card :원룸들="원룸들"/>
+  <Card @openModal="모달창열렸니 = true; 누른거 = $event" :원룸들="원룸들" />
   <Discount />
 </template>
 
