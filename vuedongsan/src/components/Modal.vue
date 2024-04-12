@@ -23,8 +23,19 @@ export default {
 
     data() {
         return {
-            month: 0,
-            endPrice: 0,
+            month: 1
+        }
+    },
+    watch: {
+        month() {
+            if (this.month > 12) {
+                this.month = 12
+                alert('12보다 클 수 없습니다.')
+            }
+            if (isNaN(this.month)) {
+                this.month = 1
+                alert('숫자를 입력해주세요')
+            }
         }
     }
 }
