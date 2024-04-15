@@ -35,9 +35,9 @@ https://codingapple.com/course/vue-js/
 - [x] Vue의 라이프사이클을 어디다 쓰냐면
 
 ### 📌 Part2 : Nlog 레이아웃과 라우터
-- [ ] Blog 프로젝트 생성과 뷰에서 Bootstrap 4, 5 사용법
-- [ ] 블로그 글 목록을 만들어보자 & 데이터바인딩, props 복습
-- [ ] vue-router 설치와 기본 라우팅
+- [x] Blog 프로젝트 생성과 뷰에서 Bootstrap 4, 5 사용법
+- [x] 블로그 글 목록을 만들어보자 & 데이터바인딩, props 복습
+- [x] vue-router 설치와 기본 라우팅
 - [ ] 상세페이지 200만개 만들기 (URL 파라미터)
 - [ ] 심심할까봐 소개하는 Nested routes & push 함수
 - [ ] 라우터 나머지 기능들 (hash mode, guards)

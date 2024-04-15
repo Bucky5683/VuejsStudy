@@ -56,11 +56,7 @@
             </div>
           </div>
           <!-- Nested row for non-featured blog posts-->
-          <div class="row">
-            <div v-for="(a, i) in listData" :key="i" class="col-lg-6">
-              <ListView :card_date="a.date" :card_title="a.title" :card_contents="a.content" :number_id="a.number"/>
-            </div>
-          </div>
+          <ListView :listData="listData"/>
           <!-- Pagination-->
           <nav aria-label="Pagination">
             <hr class="my-0" />
@@ -155,4 +151,4 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-</style>./components/ListView.vue
+</style>
