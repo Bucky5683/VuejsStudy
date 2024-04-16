@@ -5,7 +5,7 @@
             <div class="small text-muted">{{card_date}}</div>
             <h2 class="card-title h4">{{card_title}}</h2>
             <p class="card-text">{{card_contents}}</p>
-            <a class="btn btn-primary" href="#!">Read more →</a>
+            <router-link class="btn btn-primary" :to= "detail_link">Read more →</router-link>
         </div>
     </div>
 </template>
@@ -18,6 +18,11 @@ export default {
         card_title: String,
         card_contents: String,
         number_id: Number,
+    },
+    data() {
+        return {
+            detail_link: "/detail/" + this.number_id
+        }
     }
 }
 </script>
